@@ -4,6 +4,8 @@ A Streamlit dashboard for exploring daily OHLCV stock data (moving averages,
 returns, volatility, and candlestick/volume charts), backed by a SQLite
 database populated from the Alpha Vantage API.
 
+[Live Dashboard](https://stock-dashboard-d3zuky2gumfdrtl5tnemrm.streamlit.app/)
+
 ## Project structure
 
 ```
