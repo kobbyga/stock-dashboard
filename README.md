@@ -23,7 +23,7 @@ database populated from the Alpha Vantage API.
 
 1. Clone the repo and create a virtual environment:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/kobbyga/stock-dashboard
    cd stock-dashboard
    python -m venv venv
    source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -50,7 +50,6 @@ streamlit run dashboard2.py
 ## Notes
 
 - `fetch_store_stocks2.py` reads your Alpha Vantage key from the
-  `ALPHA_VANTAGE_API_KEY` environment variable — it is **not** hardcoded, so
-  it's safe to keep this repo public. Never commit your real `.env` file.
+  `ALPHA_VANTAGE_API_KEY` environment variable
 - Alpha Vantage's free tier is rate-limited (5 calls/minute), which is why
   the fetch script sleeps 15s between symbols.
