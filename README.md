@@ -15,7 +15,8 @@ stock-dashboard/
 ├── data/
 │   └── market_data2.db      # Sample SQLite database (AAPL, MSFT, TSLA, GOOGL, AMZN)
 ├── migrations/
-│   └── 001_create_stocks_table.sql
+│   ├── 001_create_stocks_table_mssql.sql
+│   └── 001_create_stocks_table_sqlite.sql
 ├── tests/
 │   └── test_etl.py
 ├── requirements.txt
