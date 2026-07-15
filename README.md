@@ -56,6 +56,27 @@ The repo ships with a sample database, so you can run the dashboard right away:
 streamlit run dashboard2.py
 ```
 
+## Running the test
+
+1. Install pytest if not already downloaded:
+
+```bash
+pip install pytest
+```
+2. Run test from repository root:
+
+```bash
+pytest -q
+```
+
+## Migration Plan
+
+Migrations: SQL migration files are in migrations/.
+
+- 01_create_stocks_table_sqlite.sql creates the prototype table for local testing.
+
+- 001_create_stocks_table_mssql.sql is the production schema for MS SQL Server (use in SSMS or via sqlcmd or a migration tool).
+
 ## Notes
 
 - `fetch_store_stocks2.py` reads your Alpha Vantage key from the
