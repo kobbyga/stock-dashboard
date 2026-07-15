@@ -6,7 +6,7 @@ import pytest
 # Import functions from your script. Adjust module name if your file is named differently.
 from fetch_store_stocks2 import fetch_stock_data, save_to_db, create_database
 
-# --- Helpers / Dummy responses ------------------------------------------------
+# Helpers / Dummy responses 
 class DummyResp:
     def __init__(self, payload):
         self._payload = payload
@@ -14,7 +14,7 @@ class DummyResp:
     def json(self):
         return self._payload
 
-# --- Tests --------------------------------------------------------------------
+# Tests 
 def test_fetch_stock_data_monkeypatch(monkeypatch):
     # Ensure the function finds an API key (it reads env inside the function)
     monkeypatch.setenv("ALPHA_VANTAGE_API_KEY", "DUMMY_KEY")
