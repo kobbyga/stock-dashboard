@@ -60,3 +60,13 @@ streamlit run dashboard2.py
   `ALPHA_VANTAGE_API_KEY` environment variable
 - Alpha Vantage's free tier is rate-limited (5 calls/minute), which is why
   the fetch script sleeps 15s between symbols.
+  
+## Development Container
+
+This repository includes a Dev Container configuration for GitHub Codespaces and
+VS Code Dev Containers. Opening the project in a supported environment will:
+
+- Install the required system and Python dependencies.
+- Install the Streamlit package.
+- Automatically launch the dashboard (`dashboard2.py`).
+- Forward port 8501 and open the application preview.
