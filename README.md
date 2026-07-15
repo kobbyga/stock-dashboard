@@ -38,12 +38,11 @@ stock-dashboard/
    pip install -r requirements.txt
    ```
 
-2. (Optional — only needed to refresh the data) Get a free API key from
+2. Get a free API key from
    [Alpha Vantage](https://www.alphavantage.co/support/#api-key), then:
    ```bash
    cp .env.example .env
    # edit .env and paste your key in
-   export $(cat .env | xargs)   # or use a tool like python-dotenv / direnv
    python fetch_store_stocks2.py
    ```
 
