@@ -9,15 +9,23 @@ database populated from the Alpha Vantage API.
 ## Project structure
 
 ```
-.
+stock-dashboard/
 ├── dashboard2.py            # Streamlit app
 ├── fetch_store_stocks2.py   # Pulls daily prices from Alpha Vantage into SQLite
 ├── data/
 │   └── market_data2.db      # Sample SQLite database (AAPL, MSFT, TSLA, GOOGL, AMZN)
+├── migrations/
+│   └── 001_create_stocks_table.sql
 ├── requirements.txt
 ├── .env.example
 └── .gitignore
 ```
+
+## Overview
+
+- **ETL:** `fetch_store_stocks2.py` fetches daily OHLCV from Alpha Vantage, validates types, and writes idempotent inserts into `data/market_data2.db`.
+- **DB schema:** `stocks(symbol TEXT, date TEXT, open_price REAL, high_price REAL, low_price REAL, close_price REAL, daily_volume INTEGER)` with composite primary key **(symbol, date)** to prevent duplicates.
+- **Dashboard:** `dashboard2.py` reads the DB and provides interactive charts and analytics.
 
 ## Setup
 
